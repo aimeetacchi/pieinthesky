@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700');
+
+@import 'variables';
+@import 'base';
+@import 'utilities';
+
+/*Sections*/
+@import 'about';
+@import 'gallery';
+@import 'prices';
+@import 'reviews';
+@import 'contact';
+
+
+/* ==== MOBILE FIRST ===== */
+header {
+	width: $fullwidth;
+	background-color: $colorset2;
+}
+.burger-container {
+	height: 50px;
+}
+
+.logo {
+	width: 55%;
+	margin: 0 auto;
+	text-align: center;
+	img {
+		width: $fullwidth;
+	}
+}
+
+.burger-menu {
+		position: relative;
+		position: absolute;
+		top: 5px;
+		right: 0;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		background-color: $colorset2;
+
+		.menubar {
+			position: absolute;
+			background-color: $light;
+			border-radius:50px;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			right: 0;
+			width: 25px;
+			height: 3px;
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+			transition: all 0.2s ease-out;
+			
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				border-radius:50px;
+				width: 25px;
+				height: 3px;
+				background-color: $light;
+				box-shadow: 0 2px 5px rgba(0,0,0,.2);
+				transition: all .3s ease-out;
+			}
+
+			&:before {
+				top: -10px;
+			}
+
+			&:after {
+				top: 10px;
+			}
+
+		}
+}
+
+.burger-menu.active .menubar {
+		background-color: $colorset2;
+		box-shadow: 0 2px 5px rgba(0,0,0,0);
+
+		&:before {
+			transform: rotate(45deg);
+			top: 0;
+		}
+
+		&:after {
+			transform: rotate(135deg);
+			top: 0;
+		}
+}
+
+// ======== NAV ON MOBILE ============
+nav { font-family: $mainFont2;}
+.nav-items {
+	display: block;
+	list-style: none;
+	font-size: 1.5em;
+	margin:0;
+	padding: 0;
+	font-weight: 700;
+	color: $light;
+	text-align: center;
+
+	.nav-item {
+	padding: .2em 0;
+		.nav-link {
+			color: $light;
+			font-weight: 400;
+			transition: all .3s ease-out;
+			&:hover {
+				color: $colorset4;
+			}
+		}
+	}
+	.nav-item:nth-child(odd){
+		background-color: $colorset3;
+	}
+}
+
+/* ===== TABLET CODE  768px ====== */
+@media screen and (min-width: $breakpoint-tablet) {
+	
+	.burger-menu {
+		display: none;
+	}
+
+	.nav-items {
+		display: flex;
+		justify-content: space-between;
+	
+			.nav-item {
+				width: 150px;
+			}
+			.nav-item:nth-child(odd){
+				background-color: transparent;
+			}
+		}
+
+}
+
+/* ==== DESKTOP CODE  860px ===== */
+@media screen and (min-width: $breakpoint-desktop) {
+	header {
+		display: grid;
+		justify-content: space-between;
+		align-items: center;
+		grid-template-columns: 20% 60%;
+		margin: 0 auto;
+	}
+	.logo {
+		width: $fullwidth;
+		margin: 0 auto;
+	}
+	
+	.burger-container {
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		height: 60px;
+	}
+
+	.active {
+	box-shadow: 0 1px 3px #EEEEEE;
+	}
+
+	
+	
+}
+
+// ====== HERO STYLES ==========
+
+.hero-banner {
+	background: url("/images/hero.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	border-bottom: 124px solid $colorset3;
+	height: 73vh;
+	
+	.hero-content {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		position: relative;
+		height: $fullwidth;
+		margin: 0 auto;
+		text-align:center;
+		width: 100%;
+
+		.heroh1 {
+			background: rgba(200,181,154, .8);
+			padding: 1em .5em;
+			color: $colorset2;
+			line-height: 1.2;
+			font-family: $mainFont2;
+			font-size: 2.2rem;
+			width: 90%;
+		}
+
+		a .fa {
+			color: $colorset4;
+			font-size:2em;
+			position: absolute;
+			transition: all .5s ease-out;
+			top: 87%;
+			left: 45%;
+
+			&:hover {
+			color: $colorset3;
+			}
+		}
+	}
+}
+
+/* ===== TABLET CODE  768px ====== */
+@media screen and (min-width: $breakpoint-tablet) {
+	/* === HERO CONTAINER === */
+	.hero-banner {
+		height: 83vh;	
+			.hero-content {
+				
+				.fa {
+					font-size:2.5em;
+					top: $fullwidth;
+				}
+			}
+		}
+}
+
+/* ==== DESKTOP CODE  860px ===== */
+@media screen and (min-width: $breakpoint-desktop) {
+	.hero-banner {
+		height: 100vh;
+		border-top: 15px solid $colorset3;	
+		.hero-content {
+			padding: 4em 2em;
+			width: 80%;
+		}
+	}
+}
+
+// FOR BANNERS
+.banner {
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// FOOTER ----
+footer {
+	background-color: $colorset2;
+	color: $light;
+	font-size: .7em;
+	line-height: 1.8;
+	padding: 2em;
+
+	a {
+		color: $light;
+	}
+
+	.social{
+		width: 100%;
+		text-align: right;
+	}
+}
+
+/* ==== DESKTOP CODE  860px ===== */
+@media screen and (min-width: $breakpoint-desktop) {
+	footer {
+		padding: 1% 2.6%;
+		display: grid;
+		grid-template-columns: 70% 30%;
+		align-items: center; 
+
+		.social {
+			padding: 1em;
+			font-size: 1.5rem;
+		}
+	}
+}

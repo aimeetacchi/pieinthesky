@@ -1,0 +1,41 @@
+<footer>
+   <p>&copy; Copyright <script> document.write(new Date().getFullYear())</script> Pie In The Sky Tea Room. All rights reserved. Webdesign and development by <a href="https://www.aimee-tacchi.co.uk">Aimee Tacchi Web Design</a></p>
+<div class="social">
+	social icons here ----
+</div>
+
+</footer>
+	<!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+	<script>
+		$(".burger-menu").click(function(){
+				$(this).toggleClass('active');
+			 	$(".nav-itemsMobile").toggle();
+		});
+
+		//Scroll smooth on a tag links.
+		 $('.scrolltoRW').click(function () {
+              var aTag = $(this).attr('href');
+              $('html,body').animate({
+                  scrollTop: $(aTag).offset().top
+              }, 600);
+              return false;
+          });
+
+		 // FIXED HEADER ON SCROLL 
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+	    	if (scroll > 200 ) {
+	    		$('.burger-container').addClass('active');
+
+		    } else {
+		    	$('.burger-container').removeClass('active');
+		    }
+		});
+	</script>
+
+	<!-- JS CODE -->      
+    <script src="dist/js/app.js"></script>
+</body>
+</html>

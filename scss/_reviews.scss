@@ -1,0 +1,14 @@
+// Reviews Styles
+
+.reviews-banner {
+	background-image: url(/images/reviewsbanner.jpg);
+
+	h2 {
+		background-color: rgba(200,181,154, .5);
+		padding: 1em;
+	}
+}
+.reviews {
+	background-color: $colorset1;
+	padding: 2em;
+}

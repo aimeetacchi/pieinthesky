@@ -1,0 +1,13 @@
+// Gallery Styles ---
+.gallery-banner {
+	background-image: url(/images/gallerybanner.jpg);
+
+	h2 {
+		background-color: rgba(200,181,154, .5);
+		padding: 1em;
+	}
+}
+.gallery {
+	background-color: $colorset1;
+	padding: 2em;
+}

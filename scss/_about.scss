@@ -1,0 +1,20 @@
+// ABOUT / STORY SECTION ---
+.story-banner {
+	background-image: url(/images/storybanner.jpg);
+
+	h2 {
+		background-color: rgba(200,181,154, .5);
+		padding: 1em;
+	}
+}
+.story {
+	background-color: $colorset1;
+	padding: 2em;
+}
+
+/* ==== DESKTOP CODE  860px ===== */
+@media screen and (min-width: $breakpoint-desktop) {
+	.story {
+		padding: 2em 6em;
+	}
+}

@@ -1,0 +1,13 @@
+// PRICE STYLES
+.prices-banner {
+	background-image: url(/images/pricesbanner.jpg);
+
+	h2 {
+		background-color: rgba(200,181,154, .5);
+		padding: 1em;
+	}
+}
+.prices {
+	background-color: $colorset1;
+	padding: 2em;
+}
