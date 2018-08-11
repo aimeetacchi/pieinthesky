@@ -2,13 +2,41 @@
 
 .reviews-banner {
 	background-image: url(/images/reviewsbanner.jpg);
-
-	h2 {
-		background-color: rgba(200,181,154, .5);
-		padding: 1em;
-	}
 }
 .reviews {
-	background-color: $colorset1;
-	padding: 2em;
+	@extend %sections;
+	background-color: $colorset2;
+	color: $light;
+	border-bottom: 3rem solid $colorset3;
+
+	.reviewSection {
+		display: grid;
+		grid-template-columns: 100%;
+		justify-content: space-between;
+		grid-row-gap: 50px;
+
+		small {
+			text-align: right;
+			margin: 1rem 0;
+			display:block;
+		}
+	}
+}
+
+/* ===== TABLET CODE  640px ====== */
+@media screen and (min-width: $breakpoint-tablet) {
+	.reviews {
+		font-size: 2rem;
+
+		.reviewSection {
+			grid-template-columns: repeat(2, 45%)
+		}
+	}
+}
+
+/* ==== DESKTOP CODE  940px ===== */
+@media screen and (min-width: $breakpoint-desktop) {
+	.reviews {
+		padding: 5rem;
+	}
 }

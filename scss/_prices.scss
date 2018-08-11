@@ -1,13 +1,65 @@
 // PRICE STYLES
 .prices-banner {
-	background-image: url(/images/pricesbanner.jpg);
-
-	h2 {
-		background-color: rgba(200,181,154, .5);
-		padding: 1em;
-	}
+	background-image: url('/images/pricebanner.jpg');
 }
 .prices {
-	background-color: $colorset1;
-	padding: 2em;
+	@extend %sections;	
+	border-bottom: 3rem solid $colorset4;
+	
+	.prices-section {
+
+		.priceList {	
+			justify-content: space-between;
+			margin-bottom: 4rem;
+			
+			
+			.food,
+			.drinks {
+				width: 50%;
+				.menuimages {
+					.pricelistimg {
+						display: none;
+					}
+				}
+			}
+		}
+		.priceList ul {
+			list-style: none;
+			font-size: 1.8rem;
+		}
+		
+	}
+	
+}
+
+/* ===== TABLET CODE  640px ====== */
+@media screen and (min-width: $breakpoint-tablet) {
+	.prices {
+		font-size: 2rem;
+		.prices-section {
+			
+			.priceList {
+				display: flex;
+				
+				.drinks {
+					.menuimages {
+						margin: 6rem 0;
+						
+						.pricelistimg {
+							display: block;
+							width: 100%;
+							border:5px solid white;
+						}
+					}
+					
+				}
+				
+			}
+		}
+		
+	}
+	
+	
+
+	
 }

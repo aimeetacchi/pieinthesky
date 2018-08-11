@@ -95,7 +95,7 @@ nav { font-family: $mainFont2;}
 .nav-items {
 	display: block;
 	list-style: none;
-	font-size: 1.5em;
+	font-size: 2.5rem;
 	margin:0;
 	padding: 0;
 	font-weight: 700;
@@ -103,7 +103,7 @@ nav { font-family: $mainFont2;}
 	text-align: center;
 
 	.nav-item {
-	padding: .2em 0;
+	padding: .2rem 0;
 		.nav-link {
 			color: $light;
 			font-weight: 400;
@@ -145,7 +145,7 @@ nav { font-family: $mainFont2;}
 		display: grid;
 		justify-content: space-between;
 		align-items: center;
-		grid-template-columns: 20% 60%;
+		grid-template-columns: 20% 40%;
 		margin: 0 auto;
 	}
 	.logo {
@@ -163,11 +163,9 @@ nav { font-family: $mainFont2;}
 
 	.active {
 	box-shadow: 0 1px 3px #EEEEEE;
-	}
-
-	
-	
+	}	
 }
+
 
 // ====== HERO STYLES ==========
 
@@ -175,8 +173,8 @@ nav { font-family: $mainFont2;}
 	background: url("/images/hero.jpg") no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	border-bottom: 124px solid $colorset3;
-	height: 73vh;
+	border-bottom: 5rem solid $colorset3;
+	height: 118vh;
 	
 	.hero-content {
 		display:flex;
@@ -191,21 +189,20 @@ nav { font-family: $mainFont2;}
 
 		.heroh1 {
 			background: rgba(200,181,154, .8);
-			padding: 1em .5em;
+			padding: 3rem 1rem;
 			color: $colorset2;
 			line-height: 1.2;
 			font-family: $mainFont2;
-			font-size: 2.2rem;
-			width: 90%;
+			font-size: 3.2rem;
 		}
 
 		a .fa {
 			color: $colorset4;
-			font-size:2em;
+			font-size:5rem;
 			position: absolute;
 			transition: all .5s ease-out;
-			top: 87%;
-			left: 45%;
+			top: 85%;
+			left: 50%;
 
 			&:hover {
 			color: $colorset3;
@@ -218,14 +215,8 @@ nav { font-family: $mainFont2;}
 @media screen and (min-width: $breakpoint-tablet) {
 	/* === HERO CONTAINER === */
 	.hero-banner {
-		height: 83vh;	
-			.hero-content {
-				
-				.fa {
-					font-size:2.5em;
-					top: $fullwidth;
-				}
-			}
+		height: 83vh;
+		border-bottom: 14rem solid $colorset3;
 		}
 }
 
@@ -235,8 +226,12 @@ nav { font-family: $mainFont2;}
 		height: 100vh;
 		border-top: 15px solid $colorset3;	
 		.hero-content {
-			padding: 4em 2em;
+			padding: 0 2rem;
 			width: 80%;
+			.heroh1 {
+				padding: 4rem 1rem;
+				margin: 0;
+			}
 		}
 	}
 }
@@ -250,23 +245,48 @@ nav { font-family: $mainFont2;}
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	h2 {
+		background-color: rgba(200,181,154, .5);
+		padding: 3rem 5rem;
+		box-shadow: 1px 1px 25px $colorset2;
+	}
 }
 
 // FOOTER ----
 footer {
 	background-color: $colorset2;
 	color: $light;
-	font-size: .7em;
 	line-height: 1.8;
-	padding: 2em;
+	padding: 2rem;
+	p {
+		font-size: 1.2rem;
 
-	a {
-		color: $light;
+		a {
+			color: $light;
+			&:hover {
+				color: $light;
+			}
+		}
 	}
+	
 
 	.social{
 		width: 100%;
 		text-align: right;
+		.fa {
+			font-size: 30px;
+			transition: all .2s ease-in;
+			&:hover {
+				transform: rotate(20deg);
+			}
+		}
+		a {
+			transition: all .2s ease-in;
+			&:hover {
+				color: $colorset1;
+			}
+		}
 	}
 }
 
@@ -277,10 +297,16 @@ footer {
 		display: grid;
 		grid-template-columns: 70% 30%;
 		align-items: center; 
-
+		p {
+			font-size: 1rem;
+		}
 		.social {
-			padding: 1em;
-			font-size: 1.5rem;
+			padding: 1rem;
+
+			.fab {
+				padding: 0 1rem;
+				font-size: 3rem;
+			}
 		}
 	}
 }

@@ -1,13 +1,15 @@
 <footer>
-   <p>&copy; Copyright <script> document.write(new Date().getFullYear())</script> Pie In The Sky Tea Room. All rights reserved. Webdesign and development by <a href="https://www.aimee-tacchi.co.uk">Aimee Tacchi Web Design</a></p>
+   <p>&copy; Copyright <script> document.write(new Date().getFullYear())</script> Pie In The Sky Tea Room. All rights reserved. Webdesign and development by <a href="https://www.aimee-tacchi.co.uk"><strong>Aimee Tacchi Web Design</strong></a></p>
 <div class="social">
-	social icons here ----
+	<a href="https://www.facebook.com/pieintheskytearooms/" target="_blank"><i class="fab fa-facebook"></i></a>
+	<a href="https://www.tripadvisor.co.uk/Restaurant_Review-g503869-d12962566-Reviews-Pie_in_the_Sky_Tea_Rooms-Hemel_Hempstead_Hertfordshire_England.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
 </div>
 
 </footer>
 	<!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    
+    <!-- fancybox -->      
+	<script src="../dist/js/jquery.fancybox.min.js"></script>
 	<script>
 		$(".burger-menu").click(function(){
 				$(this).toggleClass('active');
@@ -33,9 +35,18 @@
 		    	$('.burger-container').removeClass('active');
 		    }
 		});
-	</script>
 
-	<!-- JS CODE -->      
-    <script src="dist/js/app.js"></script>
+		$('[data-fancybox="gallery"]').fancybox({
+		 // Horizontal space between slides
+		 gutter: 50,
+
+		// Enable keyboard navigation
+		keyboard: true,
+
+		// Should display navigation arrows at the screen edges
+		arrows: true,
+		});
+	</script>
+	
 </body>
 </html>

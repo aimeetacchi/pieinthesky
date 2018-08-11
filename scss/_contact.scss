@@ -1,14 +1,66 @@
 // CONTACT US STYLES
 .contact-banner {
 	background-image: url(/images/contactbanner.jpg);
-
-	h2 {
-		background-color: rgba(200,181,154, .5);
-		padding: 1em;
-
-	}
 }
 .contact {
-	background-color: $colorset1;
-	padding: 2em;
+	@extend %sections;
+	padding: 0;
+		.contact-section {
+			display: grid;
+
+			.address {
+				padding: 1.5rem 2rem;
+				grid-row: 1/2;
+				line-height: 1.8;
+				
+				a {
+					color: $dark;
+					font-weight: 700;
+				}
+			}
+
+			#map {
+				.overlay {
+					background:transparent; 
+					position:relative; 
+					width:100%;
+					height:480px; /* your iframe height */
+					top:480px;  /* your iframe height */
+					margin-top:-480px;  /* your iframe height */
+				 }
+				#googlemap {
+					width:100%;
+					height:480px;
+					border: none;
+					display: block;
+				}
+			}
+		}
+	/* ==== DESKTOP CODE  940px ===== */
+	@media screen and (min-width: $breakpoint-desktop) {
+		.contact-section {
+			display: grid;
+			justify-content: space-between;
+			grid-template-columns: repeat(2, 48%);
+
+			.address {
+				padding: 0rem 2rem;
+				grid-row: 1/2;
+			}
+
+			#map {
+				grid-row: 1/2;
+				.overlay {
+					height:640px; /* your iframe height */
+					top:640px;  /* your iframe height */
+					margin-top:-640px;  /* your iframe height */
+				 }
+				#googlemap {
+					height:640px;
+				}
+			}
+		}
+	}
 }
+
+

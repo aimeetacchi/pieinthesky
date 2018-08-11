@@ -1,13 +1,52 @@
 // Gallery Styles ---
 .gallery-banner {
 	background-image: url(/images/gallerybanner.jpg);
-
-	h2 {
-		background-color: rgba(200,181,154, .5);
-		padding: 1em;
-	}
 }
 .gallery {
-	background-color: $colorset1;
-	padding: 2em;
+	@extend %sections;
+	border-bottom: 8rem solid $colorset2;
+
+	.galleryImg {
+		display: grid;
+		grid-template-columns: 100%;
+		justify-content: space-between;
+		figure {
+			position: relative;
+			img {
+				width: 100%;
+				display: block;
+				box-shadow: 1px 1px 10px $dark;
+			}
+			figcaption {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(#efefef, .5);
+				color: $colorset2;
+				width: 100%;
+				padding: 1rem;
+			}
+		}
+
+	}
+}
+/* ===== TABLET CODE  640px ====== */
+@media screen and (min-width: $breakpoint-tablet) {
+	.gallery {
+		font-size: 1.5rem;
+		.galleryImg {
+			grid-template-columns: repeat(2, 45%);
+			grid-gap: 2rem;
+			margin: 2.5rem 0;
+		}
+	}
+}
+/* ==== DESKTOP CODE  940px ===== */
+@media screen and (min-width: $breakpoint-desktop) {
+	.gallery {
+
+		.galleryImg {
+			grid-template-columns: repeat(4, 23%);
+		}
+	}
 }
