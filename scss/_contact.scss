@@ -5,17 +5,19 @@
 .contact {
 	@extend %sections;
 	padding: 0;
+	
 		.contact-section {
 			display: grid;
 
 			.address {
 				padding: 1.5rem 2rem;
 				grid-row: 1/2;
-				line-height: 1.8;
 				
 				a {
 					color: $dark;
 					font-weight: 700;
+					line-height: 1.2;
+					font-size: 16px;
 				}
 			}
 

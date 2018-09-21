@@ -118,7 +118,7 @@ nav { font-family: $mainFont2;}
 	}
 }
 
-/* ===== TABLET CODE  768px ====== */
+/* ===== TABLET CODE  640px ====== */
 @media screen and (min-width: $breakpoint-tablet) {
 	
 	.burger-menu {
@@ -139,14 +139,15 @@ nav { font-family: $mainFont2;}
 
 }
 
-/* ==== DESKTOP CODE  860px ===== */
+/* ==== DESKTOP CODE  940px ===== */
 @media screen and (min-width: $breakpoint-desktop) {
 	header {
 		display: grid;
 		justify-content: space-between;
 		align-items: center;
-		grid-template-columns: 20% 40%;
+		grid-template-columns: 20% 60%;
 		margin: 0 auto;
+		height: 15vh;
 	}
 	.logo {
 		width: $fullwidth;
@@ -211,19 +212,19 @@ nav { font-family: $mainFont2;}
 	}
 }
 
-/* ===== TABLET CODE  768px ====== */
+/* ===== TABLET CODE  640px ====== */
 @media screen and (min-width: $breakpoint-tablet) {
 	/* === HERO CONTAINER === */
 	.hero-banner {
 		height: 83vh;
-		border-bottom: 14rem solid $colorset3;
+		border-bottom: 6rem solid $colorset3;
 		}
 }
 
-/* ==== DESKTOP CODE  860px ===== */
+/* ==== DESKTOP CODE  940px ===== */
 @media screen and (min-width: $breakpoint-desktop) {
 	.hero-banner {
-		height: 100vh;
+		height: 85vh;
 		border-top: 15px solid $colorset3;	
 		.hero-content {
 			padding: 0 2rem;
@@ -259,7 +260,9 @@ footer {
 	color: $light;
 	line-height: 1.8;
 	padding: 2rem;
-	p {
+	text-align: center;
+
+	small {
 		font-size: 1.2rem;
 
 		a {
@@ -272,10 +275,10 @@ footer {
 	
 
 	.social{
-		width: 100%;
-		text-align: right;
-		.fa {
-			font-size: 30px;
+
+		.fab {
+			font-size: 24px;
+			padding: .5em;
 			transition: all .2s ease-in;
 			&:hover {
 				transform: rotate(20deg);
@@ -296,8 +299,10 @@ footer {
 		padding: 1% 2.6%;
 		display: grid;
 		grid-template-columns: 70% 30%;
-		align-items: center; 
-		p {
+		align-items: center;
+
+		small {
+			grid-area: 1;
 			font-size: 1rem;
 		}
 		.social {
