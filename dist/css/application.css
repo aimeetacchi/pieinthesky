@@ -338,7 +338,7 @@ header {
       height: 3px;
       background-color: #EEEEEE;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: all .3s ease-out; }
+      transition: all 0.3s ease-out; }
     .burger-menu .menubar:before {
       top: -10px; }
     .burger-menu .menubar:after {
@@ -346,7 +346,7 @@ header {
 
 .burger-menu.active .menubar {
   background-color: #2f2616;
-  box-shadow: 0 2px 5px transparent; }
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0); }
   .burger-menu.active .menubar:before {
     transform: rotate(45deg);
     top: 0; }
@@ -367,11 +367,11 @@ nav {
   color: #EEEEEE;
   text-align: center; }
   .nav-items .nav-item {
-    padding: .2rem 0; }
+    padding: 0.2rem 0; }
     .nav-items .nav-item .nav-link {
       color: #EEEEEE;
       font-weight: 400;
-      transition: all .3s ease-out; }
+      transition: all 0.3s ease-out; }
       .nav-items .nav-item .nav-link:hover {
         color: #b1946b; }
   .nav-items .nav-item:nth-child(odd) {
@@ -393,11 +393,12 @@ nav {
 @media screen and (min-width: 940px) {
   header {
     display: grid;
-    justify-content: space-between;
-    align-items: center;
     grid-template-columns: 20% 60%;
+    justify-content: space-between;
     margin: 0 auto;
     height: 15vh; }
+  nav {
+    padding-top: 20px; }
   .logo {
     width: 100%;
     margin: 0 auto; }
@@ -408,7 +409,7 @@ nav {
     width: 100%;
     height: 60px; }
   .active {
-    box-shadow: 0 1px 3px #EEEEEE; } }
+    box-shadow: 0 1px 3px #eeeeee; } }
 
 .hero-banner {
   background: url("/images/hero.jpg") no-repeat;
@@ -437,7 +438,7 @@ nav {
       color: #b1946b;
       font-size: 5rem;
       position: absolute;
-      transition: all .5s ease-out;
+      transition: all 0.5s ease-out;
       top: 85%;
       left: 50%; }
       .hero-banner .hero-content a .fa:hover {
@@ -489,12 +490,12 @@ footer {
         color: #EEEEEE; }
   footer .social .fab {
     font-size: 24px;
-    padding: .5em;
-    transition: all .2s ease-in; }
+    padding: 0.5em;
+    transition: all 0.2s ease-in; }
     footer .social .fab:hover {
       transform: rotate(20deg); }
   footer .social a {
-    transition: all .2s ease-in; }
+    transition: all 0.2s ease-in; }
     footer .social a:hover {
       color: #d4bfa3; }
 
